@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lessons | CodeScape</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dark Mode Toggle -->
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Dark Mode</span>
+            </button>
+        </div>
+
+        <header class="lesson-header">
+            <div class="header-main">
+                <h1>HTML Lessons</h1>
+                <nav class="breadcrumb">
+                    <a href="home.html">Home</a> > <span>HTML Lessons</span>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="lessons-main">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Lesson Topics</h3>
+                </div>
+                <nav class="lesson-nav">
+                    <ul>
+                        <li><a href="#intro" class="nav-link active">Introduction to HTML</a></li>
+                        <li><a href="#structure" class="nav-link">HTML Document Structure</a></li>
+                        <li><a href="#elements" class="nav-link">HTML Elements</a></li>
+                        <li><a href="#attributes" class="nav-link">HTML Attributes</a></li>
+                        <li><a href="#headings" class="nav-link">Headings & Paragraphs</a></li>
+                        <li><a href="#links" class="nav-link">Links & Images</a></li>
+                        <li><a href="#lists" class="nav-link">Lists</a></li>
+                        <li><a href="#tables" class="nav-link">Tables</a></li>
+                        <li><a href="#forms" class="nav-link">Forms</a></li>
+                        <li><a href="#semantic" class="nav-link">Semantic HTML</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <div class="lesson-content">
+                <!-- Introduction Section -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-hero">
+                        <h2>🌐 Introduction to HTML</h2>
+                        <p class="hero-subtitle">The Foundation of Every Website</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>🎯 What is HTML?</h3>
+                        <p><strong>HTML (HyperText Markup Language)</strong> is the standard language for creating web pages. It's not a programming language - it's a <strong>markup language</strong> that defines the structure and content of a webpage.</p>
+                        
+                        <div class="analogy-card">
+                            <h4>🏗️ Building Analogy:</h4>
+                            <div class="analogy-grid">
+                                <div class="analogy-item">
+                                    <div class="analogy-icon">📐</div>
+                                    <strong>HTML</strong>
+                                    <p>Blueprint & Structure<br>Walls, rooms, doors</p>
+                                </div>
+                                <div class="analogy-item">
+                                    <div class="analogy-icon">🎨</div>
+                                    <strong>CSS</strong>
+                                    <p>Interior Design<br>Paint, furniture, decorations</p>
+                                </div>
+                                <div class="analogy-item">
+                                    <div class="analogy-icon">⚡</div>
+                                    <strong>JavaScript</strong>
+                                    <p>Electricity & Plumbing<br>Makes things work and move</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card highlight">
+                        <h3>🚀 Why Learn HTML?</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🌍</span>
+                                <div>
+                                    <strong>Universal Language</strong>
+                                    <p>Every website uses HTML</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎯</span>
+                                <div>
+                                    <strong>Easy to Start</strong>
+                                    <p>Simple syntax for beginners</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">💼</span>
+                                <div>
+                                    <strong>Career Opportunities</strong>
+                                    <p>Essential for web developers</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🔧</span>
+                                <div>
+                                    <strong>Total Control</strong>
+                                    <p>Build exactly what you want</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>⚡ Quick Demo</h3>
+                        <div class="demo-comparison">
+                            <div class="demo-side">
+                                <h4>HTML Code</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;h1&gt;Welcome to My Site&lt;/h1&gt;
+&lt;p&gt;This is my first paragraph!&lt;/p&gt;
+&lt;button&gt;Click Me&lt;/button&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="demo-side">
+                                <h4>Browser Display</h4>
+                                <div class="browser-preview">
+                                    <h1 style="color: var(--text-dark); margin: 0 0 10px 0;">Welcome to My Site</h1>
+                                    <p style="color: var(--text-light); margin: 0 0 15px 0;">This is my first paragraph!</p>
+                                    <button style="background: var(--royal-purple); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Click Me</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <h4>Beginner Tip</h4>
+                            <p><strong>Don't worry about memorizing everything!</strong> Even experienced developers look up HTML tags. Focus on understanding the concepts first.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Document Structure Section -->
+                <section id="structure" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>📄 HTML Document Structure</h2>
+                        <p class="hero-subtitle">The Blueprint of Every Web Page</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🧱 Building Blocks</h3>
+                        <p>Every HTML document follows the same basic structure. Think of it as a recipe that all browsers understand.</p>
+                        
+                        <div class="structure-visual">
+                            <div class="structure-item essential">
+                                <code>&lt;!DOCTYPE html&gt;</code>
+                                <p>Defines the document type and HTML version</p>
+                            </div>
+                            <div class="structure-item essential">
+                                <code>&lt;html&gt;&lt;/html&gt;</code>
+                                <p>Root element that wraps all content</p>
+                            </div>
+                            <div class="structure-item important">
+                                <code>&lt;head&gt;&lt;/head&gt;</code>
+                                <p>Contains meta information about the page</p>
+                            </div>
+                            <div class="structure-item essential">
+                                <code>&lt;body&gt;&lt;/body&gt;</code>
+                                <p>Contains all visible page content</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>📝 Complete HTML Template</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Your First HTML File</h3>
+                        <p><strong>Task:</strong> Create your first HTML file</p>
+                        <ol>
+                            <li>Open a text editor (Notepad, VS Code, etc.)</li>
+                            <li>Copy the template above</li>
+                            <li>Save as <code>my-first-page.html</code></li>
+                            <li>Open it in a web browser</li>
+                        </ol>
+                        <p><strong>Congratulations! 🎉 You just created a webpage!</strong></p>
+                    </div>
+                </section>
+
+                <!-- HTML Elements Section -->
+                <section id="elements" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>🧩 HTML Elements</h2>
+                        <p class="hero-subtitle">The Building Blocks of Web Pages</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🔍 Anatomy of an HTML Element</h3>
+                        <div class="element-anatomy">
+                            <div class="anatomy-part opening-tag">&lt;tagname&gt;</div>
+                            <div class="anatomy-connector">+</div>
+                            <div class="anatomy-part content">Content</div>
+                            <div class="anatomy-connector">+</div>
+                            <div class="anatomy-part closing-tag">&lt;/tagname&gt;</div>
+                            <div class="anatomy-connector">=</div>
+                            <div class="anatomy-result">&lt;tagname&gt;Content&lt;/tagname&gt;</div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🎯 Real Element Examples</h3>
+                        <div class="element-demos">
+                            <div class="element-demo">
+                                <div class="demo-code">
+                                    <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+                                </div>
+                                <div class="demo-preview">
+                                    <p style="margin: 0;">This is a paragraph</p>
+                                </div>
+                                <div class="demo-desc">Paragraph element for text blocks</div>
+                            </div>
+                            <div class="element-demo">
+                                <div class="demo-code">
+                                    <code>&lt;h1&gt;Main Heading&lt;/h1&gt;</code>
+                                </div>
+                                <div class="demo-preview">
+                                    <h1 style="margin: 0; font-size: 1.5em;">Main Heading</h1>
+                                </div>
+                                <div class="demo-desc">Heading element for titles</div>
+                            </div>
+                            <div class="element-demo">
+                                <div class="demo-code">
+                                    <code>&lt;button&gt;Click Me&lt;/button&gt;</code>
+                                </div>
+                                <div class="demo-preview">
+                                    <button style="background: var(--royal-purple); color: white; border: none; padding: 8px 16px; border-radius: 4px; margin: 0;">Click Me</button>
+                                </div>
+                                <div class="demo-desc">Button for interactions</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>⚡ Empty Elements (Self-Closing)</h3>
+                        <div class="empty-elements">
+                            <div class="empty-element">
+                                <code>&lt;br&gt;</code>
+                                <span>Line break</span>
+                            </div>
+                            <div class="empty-element">
+                                <code>&lt;img&gt;</code>
+                                <span>Image</span>
+                            </div>
+                            <div class="empty-element">
+                                <code>&lt;input&gt;</code>
+                                <span>Input field</span>
+                            </div>
+                            <div class="empty-element">
+                                <code>&lt;hr&gt;</code>
+                                <span>Horizontal rule</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-card warning">
+                        <div class="tip-icon">⚠️</div>
+                        <div class="tip-content">
+                            <h4>Common Mistake</h4>
+                            <p><strong>Don't add closing tags to empty elements!</strong> <code>&lt;br&gt;</code> is correct, <code>&lt;br&gt;&lt;/br&gt;</code> is wrong.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- HTML Attributes Section -->
+                <section id="attributes" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>🔧 HTML Attributes</h2>
+                        <p class="hero-subtitle">Adding Extra Information to Elements</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🎯 What are Attributes?</h3>
+                        <p>Attributes provide additional information about HTML elements. They are always specified in the opening tag and come in name/value pairs like: <code>name="value"</code>.</p>
+                        
+                        <div class="code-example">
+                            <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</code></pre>
+                        </div>
+                        <p>In this example, <code>href</code> and <code>target</code> are attributes that modify how the link behaves.</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>📋 Common HTML Attributes</h3>
+                        <div class="attributes-grid">
+                            <div class="attribute-item">
+                                <code>id</code>
+                                <p>Unique identifier for an element</p>
+                                <div class="attribute-example">
+                                    <code>&lt;div id="header"&gt;</code>
+                                </div>
+                            </div>
+                            <div class="attribute-item">
+                                <code>class</code>
+                                <p>CSS class for styling multiple elements</p>
+                                <div class="attribute-example">
+                                    <code>&lt;p class="important"&gt;</code>
+                                </div>
+                            </div>
+                            <div class="attribute-item">
+                                <code>src</code>
+                                <p>Source file for images and scripts</p>
+                                <div class="attribute-example">
+                                    <code>&lt;img src="photo.jpg"&gt;</code>
+                                </div>
+                            </div>
+                            <div class="attribute-item">
+                                <code>alt</code>
+                                <p>Alternative text for images</p>
+                                <div class="attribute-example">
+                                    <code>&lt;img alt="A beautiful sunset"&gt;</code>
+                                </div>
+                            </div>
+                            <div class="attribute-item">
+                                <code>href</code>
+                                <p>Hyperlink reference for links</p>
+                                <div class="attribute-example">
+                                    <code>&lt;a href="page.html"&gt;</code>
+                                </div>
+                            </div>
+                            <div class="attribute-item">
+                                <code>style</code>
+                                <p>Inline CSS styling</p>
+                                <div class="attribute-example">
+                                    <code>&lt;p style="color: red;"&gt;</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Attribute Practice</h3>
+                        <p>Add attributes to make this HTML more functional:</p>
+                        <div class="code-example">
+                            <pre><code>&lt;img&gt;
+&lt;a&gt;Click here&lt;/a&gt;
+&lt;div&gt;Content&lt;/div&gt;</code></pre>
+                        </div>
+                        <details>
+                            <summary>Show Solution</summary>
+                            <div class="code-example">
+                                <pre><code>&lt;img src="image.jpg" alt="Description"&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Click here&lt;/a&gt;
+&lt;div id="main-content" class="container"&gt;Content&lt;/div&gt;</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Headings & Paragraphs Section -->
+                <section id="headings" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>📝 Headings & Paragraphs</h2>
+                        <p class="hero-subtitle">Organizing Your Content</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🔤 Headings (h1-h6)</h3>
+                        <p>HTML provides six levels of headings for creating a content hierarchy.</p>
+                        
+                        <div class="headings-demo">
+                            <div class="heading-level">
+                                <code>&lt;h1&gt;</code>
+                                <div class="heading-preview h1-preview">Main Title</div>
+                                <span>Most important - use once per page</span>
+                            </div>
+                            <div class="heading-level">
+                                <code>&lt;h2&gt;</code>
+                                <div class="heading-preview h2-preview">Section Heading</div>
+                                <span>Major sections</span>
+                            </div>
+                            <div class="heading-level">
+                                <code>&lt;h3&gt;</code>
+                                <div class="heading-preview h3-preview">Subsection</div>
+                                <span>Subsections</span>
+                            </div>
+                            <div class="heading-level">
+                                <code>&lt;h4&gt;</code>
+                                <div class="heading-preview h4-preview">Small Heading</div>
+                                <span>Minor headings</span>
+                            </div>
+                            <div class="heading-level">
+                                <code>&lt;h5&gt;</code>
+                                <div class="heading-preview h5-preview">Tiny Heading</div>
+                                <span>Rarely used</span>
+                            </div>
+                            <div class="heading-level">
+                                <code>&lt;h6&gt;</code>
+                                <div class="heading-preview h6-preview">Smallest</div>
+                                <span>Almost never used</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>📄 Paragraphs & Text Formatting</h3>
+                        <div class="text-formatting-demo">
+                            <div class="format-example">
+                                <div class="format-code">
+                                    <code>&lt;p&gt;Regular paragraph&lt;/p&gt;</code>
+                                </div>
+                                <div class="format-preview">
+                                    <p style="margin: 0;">Regular paragraph</p>
+                                </div>
+                            </div>
+                            <div class="format-example">
+                                <div class="format-code">
+                                    <code>&lt;strong&gt;Bold text&lt;/strong&gt;</code>
+                                </div>
+                                <div class="format-preview">
+                                    <strong style="margin: 0;">Bold text</strong>
+                                </div>
+                            </div>
+                            <div class="format-example">
+                                <div class="format-code">
+                                    <code>&lt;em&gt;Italic text&lt;/em&gt;</code>
+                                </div>
+                                <div class="format-preview">
+                                    <em style="margin: 0;">Italic text</em>
+                                </div>
+                            </div>
+                            <div class="format-example">
+                                <div class="format-code">
+                                    <code>Line 1&lt;br&gt;Line 2</code>
+                                </div>
+                                <div class="format-preview">
+                                    Line 1<br>Line 2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">💡</div>
+                        <div class="tip-content">
+                            <h4>Heading Best Practices</h4>
+                            <p>Use only one <code>&lt;h1&gt;</code> per page and maintain a logical hierarchy. Don't skip heading levels (h1 → h2 → h3, not h1 → h3).</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Create a Simple Article</h3>
+                        <p>Create HTML for this article structure:</p>
+                        <div class="exercise-preview">
+                            <h1 style="color: var(--text-dark); margin-bottom: 15px;">The Benefits of Exercise</h1>
+                            <p style="color: var(--text-light); margin-bottom: 20px;">Regular exercise is <strong>essential</strong> for maintaining good health.</p>
+                            
+                            <h2 style="color: var(--royal-purple); margin: 25px 0 15px 0;">Physical Benefits</h2>
+                            <p style="color: var(--text-light); margin-bottom: 20px;">Exercise helps improve cardiovascular health and build muscle.</p>
+                            
+                            <h2 style="color: var(--royal-purple); margin: 25px 0 15px 0;">Mental Benefits</h2>
+                            <p style="color: var(--text-light);">Physical activity releases <em>endorphins</em> that improve mood.</p>
+                        </div>
+                        <details>
+                            <summary>Show Solution</summary>
+                            <div class="code-example">
+                                <pre><code>&lt;h1&gt;The Benefits of Exercise&lt;/h1&gt;
+&lt;p&gt;Regular exercise is &lt;strong&gt;essential&lt;/strong&gt; for maintaining good health.&lt;/p&gt;
+
+&lt;h2&gt;Physical Benefits&lt;/h2&gt;
+&lt;p&gt;Exercise helps improve cardiovascular health and build muscle.&lt;/p&gt;
+
+&lt;h2&gt;Mental Benefits&lt;/h2&gt;
+&lt;p&gt;Physical activity releases &lt;em&gt;endorphins&lt;/em&gt; that improve mood.&lt;/p&gt;</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Links & Images Section -->
+                <section id="links" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>🔗 Links & Images</h2>
+                        <p class="hero-subtitle">Connecting and Visualizing Content</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🌐 Creating Links</h3>
+                        <p>The <code>&lt;a&gt;</code> (anchor) tag creates hyperlinks to other web pages or resources.</p>
+                        
+                        <div class="code-example">
+                            <pre><code>&lt;!-- Basic link --&gt;
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Link that opens in new tab --&gt;
+&lt;a href="https://example.com" target="_blank"&gt;Open in New Tab&lt;/a&gt;
+
+&lt;!-- Link to email --&gt;
+&lt;a href="mailto:hello@example.com"&gt;Email Us&lt;/a&gt;
+
+&lt;!-- Link to phone number --&gt;
+&lt;a href="tel:+1234567890"&gt;Call Us&lt;/a&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🖼️ Adding Images</h3>
+                        <p>The <code>&lt;img&gt;</code> tag embeds images into your web page.</p>
+                        
+                        <div class="code-example">
+                            <pre><code>&lt;!-- Basic image --&gt;
+&lt;img src="photo.jpg" alt="A beautiful landscape"&gt;
+
+&lt;!-- Image with dimensions --&gt;
+&lt;img src="photo.jpg" alt="A beautiful landscape" width="400" height="300"&gt;
+
+&lt;!-- Responsive image --&gt;
+&lt;img src="photo.jpg" alt="A beautiful landscape" style="max-width: 100%;"&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tip-card warning">
+                        <div class="tip-icon">⚠️</div>
+                        <div class="tip-content">
+                            <h4>Important: Always Use Alt Text</h4>
+                            <p>The <code>alt</code> attribute is required for accessibility. It describes the image for screen readers and displays if the image fails to load.</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Create a Navigation with Images</h3>
+                        <p>Create HTML for a simple webpage with navigation and images:</p>
+                        <div class="exercise-preview">
+                            <nav style="background: var(--royal-purple); padding: 15px; margin-bottom: 20px;">
+                                <a href="#home" style="color: white; margin-right: 15px; text-decoration: none;">Home</a>
+                                <a href="#about" style="color: white; margin-right: 15px; text-decoration: none;">About</a>
+                                <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+                            </nav>
+                            <img src="https://via.placeholder.com/400x200" alt="Sample image" style="max-width: 100%; margin-bottom: 15px;">
+                            <p>Welcome to our website! <a href="#learn-more" style="color: var(--royal-purple);">Learn more</a> about what we do.</p>
+                        </div>
+                        <details>
+                            <summary>Show Solution</summary>
+                            <div class="code-example">
+                                <pre><code>&lt;nav style="background: #6a0dad; padding: 15px;"&gt;
+    &lt;a href="#home" style="color: white; margin-right: 15px;"&gt;Home&lt;/a&gt;
+    &lt;a href="#about" style="color: white; margin-right: 15px;"&gt;About&lt;/a&gt;
+    &lt;a href="#contact" style="color: white;"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;img src="image.jpg" alt="Sample image" style="max-width: 100%;"&gt;
+
+&lt;p&gt;Welcome to our website! &lt;a href="#learn-more"&gt;Learn more&lt;/a&gt; about what we do.&lt;/p&gt;</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Lists Section -->
+                <section id="lists" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>📋 Lists</h2>
+                        <p class="hero-subtitle">Organizing Information</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🔢 Types of Lists</h3>
+                        <p>HTML provides three main types of lists for different purposes.</p>
+                        
+                        <div class="lists-demo">
+                            <div class="list-type">
+                                <h4>Unordered List (Bullets)</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;ul&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Tea&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                </div>
+                                <div class="list-preview">
+                                    <ul>
+                                        <li>Coffee</li>
+                                        <li>Tea</li>
+                                        <li>Milk</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="list-type">
+                                <h4>Ordered List (Numbers)</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;ol&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                                </div>
+                                <div class="list-preview">
+                                    <ol>
+                                        <li>First item</li>
+                                        <li>Second item</li>
+                                        <li>Third item</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="list-type">
+                                <h4>Description List</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                                </div>
+                                <div class="list-preview">
+                                    <dl>
+                                        <dt>HTML</dt>
+                                        <dd>HyperText Markup Language</dd>
+                                        <dt>CSS</dt>
+                                        <dd>Cascading Style Sheets</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🔗 Nested Lists</h3>
+                        <p>You can nest lists inside other lists to create complex structures.</p>
+                        
+                        <div class="code-example">
+                            <pre><code>&lt;ul&gt;
+    &lt;li&gt;Fruits
+        &lt;ul&gt;
+            &lt;li&gt;Apples&lt;/li&gt;
+            &lt;li&gt;Oranges&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Vegetables
+        &lt;ul&gt;
+            &lt;li&gt;Carrots&lt;/li&gt;
+            &lt;li&gt;Broccoli&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Create a Recipe List</h3>
+                        <p>Create HTML for a recipe ingredient list:</p>
+                        <div class="exercise-preview">
+                            <h3>Chocolate Chip Cookies</h3>
+                            <h4>Ingredients:</h4>
+                            <ul>
+                                <li>Flour
+                                    <ul>
+                                        <li>2 cups all-purpose</li>
+                                        <li>1 teaspoon baking soda</li>
+                                    </ul>
+                                </li>
+                                <li>Wet ingredients
+                                    <ul>
+                                        <li>1 cup butter</li>
+                                        <li>¾ cup sugar</li>
+                                    </ul>
+                                </li>
+                                <li>Chocolate chips - 2 cups</li>
+                            </ul>
+                            <h4>Steps:</h4>
+                            <ol>
+                                <li>Preheat oven to 375°F</li>
+                                <li>Mix dry ingredients</li>
+                                <li>Add wet ingredients</li>
+                                <li>Bake for 9-11 minutes</li>
+                            </ol>
+                        </div>
+                        <details>
+                            <summary>Show Solution</summary>
+                            <div class="code-example">
+                                <pre><code>&lt;h3&gt;Chocolate Chip Cookies&lt;/h3&gt;
+
+&lt;h4&gt;Ingredients:&lt;/h4&gt;
+&lt;ul&gt;
+    &lt;li&gt;Flour
+        &lt;ul&gt;
+            &lt;li&gt;2 cups all-purpose&lt;/li&gt;
+            &lt;li&gt;1 teaspoon baking soda&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Wet ingredients
+        &lt;ul&gt;
+            &lt;li&gt;1 cup butter&lt;/li&gt;
+            &lt;li&gt;¾ cup sugar&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Chocolate chips - 2 cups&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Steps:&lt;/h4&gt;
+&lt;ol&gt;
+    &lt;li&gt;Preheat oven to 375°F&lt;/li&gt;
+    &lt;li&gt;Mix dry ingredients&lt;/li&gt;
+    &lt;li&gt;Add wet ingredients&lt;/li&gt;
+    &lt;li&gt;Bake for 9-11 minutes&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Tables Section -->
+                <section id="tables" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>📊 Tables</h2>
+                        <p class="hero-subtitle">Organizing Data in Rows and Columns</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🎯 Basic Table Structure</h3>
+                        <p>Tables are created with the <code>&lt;table&gt;</code> tag and contain rows (<code>&lt;tr&gt;</code>), header cells (<code>&lt;th&gt;</code>), and data cells (<code>&lt;td&gt;</code>).</p>
+                        
+                        <div class="code-example">
+                            <pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+        &lt;th&gt;City&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;New York&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jane&lt;/td&gt;
+        &lt;td&gt;30&lt;/td&gt;
+        &lt;td&gt;London&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🏗️ Advanced Table Features</h3>
+                        <p>For better structure, use <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>.</p>
+                        
+                        <div class="code-example">
+                            <pre><code>&lt;table&gt;
+    &lt;caption&gt;Employee Information&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Department&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;001&lt;/td&gt;
+            &lt;td&gt;John Smith&lt;/td&gt;
+            &lt;td&gt;Marketing&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;002&lt;/td&gt;
+            &lt;td&gt;Jane Doe&lt;/td&gt;
+            &lt;td&gt;Engineering&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="3"&gt;Total Employees: 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🔧 Table Attributes</h3>
+                        <div class="attributes-grid">
+                            <div class="attribute-item">
+                                <code>colspan</code>
+                                <p>Makes a cell span multiple columns</p>
+                            </div>
+                            <div class="attribute-item">
+                                <code>rowspan</code>
+                                <p>Makes a cell span multiple rows</p>
+                            </div>
+                            <div class="attribute-item">
+                                <code>caption</code>
+                                <p>Adds a title to the table</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Create a Class Schedule</h3>
+                        <p>Create an HTML table for a weekly class schedule:</p>
+                        <div class="exercise-preview">
+                            <table border="1" style="border-collapse: collapse; width: 100%;">
+                                <caption>Weekly Class Schedule</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>9:00 AM</td>
+                                        <td>Math</td>
+                                        <td>Science</td>
+                                        <td>English</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00 AM</td>
+                                        <td>History</td>
+                                        <td rowspan="2">Art</td>
+                                        <td>Geography</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1:00 PM</td>
+                                        <td>Music</td>
+                                        <td>PE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <details>
+                            <summary>Show Solution</summary>
+                            <div class="code-example">
+                                <pre><code>&lt;table&gt;
+    &lt;caption&gt;Weekly Class Schedule&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Time&lt;/th&gt;
+            &lt;th&gt;Monday&lt;/th&gt;
+            &lt;th&gt;Tuesday&lt;/th&gt;
+            &lt;th&gt;Wednesday&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;9:00 AM&lt;/td&gt;
+            &lt;td&gt;Math&lt;/td&gt;
+            &lt;td&gt;Science&lt;/td&gt;
+            &lt;td&gt;English&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;11:00 AM&lt;/td&gt;
+            &lt;td&gt;History&lt;/td&gt;
+            &lt;td rowspan="2"&gt;Art&lt;/td&gt;
+            &lt;td&gt;Geography&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1:00 PM&lt;/td&gt;
+            &lt;td&gt;Music&lt;/td&gt;
+            &lt;td&gt;PE&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Forms Section -->
+                <section id="forms" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>📝 Forms</h2>
+                        <p class="hero-subtitle">Collecting User Input</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🎯 Basic Form Structure</h3>
+                        <p>Forms are created with the <code>&lt;form&gt;</code> tag and contain various input elements.</p>
+                        
+                        <div class="code-example">
+                            <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>📋 Common Form Elements</h3>
+                        <div class="form-elements-demo">
+                            <div class="form-element">
+                                <h4>Text Input</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;input type="text" name="username" placeholder="Enter username"&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="form-element">
+                                <h4>Password Input</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;input type="password" name="password" placeholder="Enter password"&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="form-element">
+                                <h4>Textarea</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;textarea name="message" rows="4" cols="50"&gt;Default text&lt;/textarea&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="form-element">
+                                <h4>Select Dropdown</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;select name="country"&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+    &lt;option value="ca"&gt;Canada&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="form-element">
+                                <h4>Radio Buttons</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;input type="radio" id="male" name="gender" value="male"&gt;
+&lt;label for="male"&gt;Male&lt;/label&gt;
+
+&lt;input type="radio" id="female" name="gender" value="female"&gt;
+&lt;label for="female"&gt;Female&lt;/label&gt;</code></pre>
+                                </div>
+                            </div>
+                            <div class="form-element">
+                                <h4>Checkboxes</h4>
+                                <div class="code-example">
+                                    <pre><code>&lt;input type="checkbox" id="subscribe" name="subscribe" value="yes"&gt;
+&lt;label for="subscribe"&gt;Subscribe to newsletter&lt;/label&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🔧 Form Attributes</h3>
+                        <div class="attributes-grid">
+                            <div class="attribute-item">
+                                <code>action</code>
+                                <p>Where to send the form data</p>
+                            </div>
+                            <div class="attribute-item">
+                                <code>method</code>
+                                <p>HTTP method (GET or POST)</p>
+                            </div>
+                            <div class="attribute-item">
+                                <code>name</code>
+                                <p>Name of the form</p>
+                            </div>
+                            <div class="attribute-item">
+                                <code>target</code>
+                                <p>Where to display the response</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Create a Contact Form</h3>
+                        <p>Create a complete contact form with various input types:</p>
+                        <div class="exercise-preview">
+                            <form style="background: var(--bg-gray); padding: 20px; border-radius: 8px;">
+                                <h3>Contact Us</h3>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Name:</label>
+                                    <input type="text" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Email:</label>
+                                    <input type="email" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Subject:</label>
+                                    <select style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                                        <option>General Inquiry</option>
+                                        <option>Support</option>
+                                        <option>Feedback</option>
+                                    </select>
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <label style="display: block; margin-bottom: 5px;">Message:</label>
+                                    <textarea rows="4" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                                </div>
+                                
+                                <div style="margin-bottom: 15px;">
+                                    <input type="checkbox" id="newsletter">
+                                    <label for="newsletter">Subscribe to newsletter</label>
+                                </div>
+                                
+                                <button type="submit" style="background: var(--royal-purple); color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">Send Message</button>
+                            </form>
+                        </div>
+                        <details>
+                            <summary>Show Solution</summary>
+                            <div class="code-example">
+                                <pre><code>&lt;form action="/contact" method="post"&gt;
+    &lt;h3&gt;Contact Us&lt;/h3&gt;
+    
+    &lt;div&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name" required&gt;
+    &lt;/div&gt;
+    
+    &lt;div&gt;
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required&gt;
+    &lt;/div&gt;
+    
+    &lt;div&gt;
+        &lt;label for="subject"&gt;Subject:&lt;/label&gt;
+        &lt;select id="subject" name="subject"&gt;
+            &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
+            &lt;option value="support"&gt;Support&lt;/option&gt;
+            &lt;option value="feedback"&gt;Feedback&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    
+    &lt;div&gt;
+        &lt;label for="message"&gt;Message:&lt;/label&gt;
+        &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    
+    &lt;div&gt;
+        &lt;input type="checkbox" id="newsletter" name="newsletter"&gt;
+        &lt;label for="newsletter"&gt;Subscribe to newsletter&lt;/label&gt;
+    &lt;/div&gt;
+    
+    &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Semantic HTML Section -->
+                <section id="semantic" class="lesson-section">
+                    <div class="section-hero">
+                        <h2>🎯 Semantic HTML</h2>
+                        <p class="hero-subtitle">Meaningful Structure for Better Web Pages</p>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🧠 What is Semantic HTML?</h3>
+                        <p>Semantic HTML uses elements that clearly describe their meaning to both browsers and developers. Instead of using generic <code>&lt;div&gt;</code> tags for everything, we use specific elements that describe their purpose.</p>
+                        
+                        <div class="analogy-card">
+                            <h4>📚 Book Analogy:</h4>
+                            <div class="analogy-grid">
+                                <div class="analogy-item">
+                                    <div class="analogy-icon">📖</div>
+                                    <strong>Non-semantic</strong>
+                                    <p>Just pages with text<br>No chapter titles or sections</p>
+                                </div>
+                                <div class="analogy-item">
+                                    <div class="analogy-icon">📚</div>
+                                    <strong>Semantic</strong>
+                                    <p>Clear structure with<br>chapters, headings, and sections</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>🏗️ Common Semantic Elements</h3>
+                        <div class="semantic-elements">
+                            <div class="semantic-element">
+                                <code>&lt;header&gt;</code>
+                                <p>Introductory content or navigation</p>
+                            </div>
+                            <div class="semantic-element">
+                                <code>&lt;nav&gt;</code>
+                                <p>Navigation links</p>
+                            </div>
+                            <div class="semantic-element">
+                                <code>&lt;main&gt;</code>
+                                <p>Main content of the document</p>
+                            </div>
+                            <div class="semantic-element">
+                                <code>&lt;article&gt;</code>
+                                <p>Self-contained composition</p>
+                            </div>
+                            <div class="semantic-element">
+                                <code>&lt;section&gt;</code>
+                                <p>Thematic grouping of content</p>
+                            </div>
+                            <div class="semantic-element">
+                                <code>&lt;aside&gt;</code>
+                                <p>Content aside from main content</p>
+                            </div>
+                            <div class="semantic-element">
+                                <code>&lt;footer&gt;</code>
+                                <p>Footer for document or section</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3>📝 Semantic HTML Example</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Blog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Awesome Blog&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#home"&gt;Home&lt;/a&gt;
+            &lt;a href="#about"&gt;About&lt;/a&gt;
+            &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Understanding Semantic HTML&lt;/h2&gt;
+            &lt;p&gt;Semantic HTML makes your code more readable...&lt;/p&gt;
+        &lt;/article&gt;
+
+        &lt;aside&gt;
+            &lt;h3&gt;Related Articles&lt;/h3&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;HTML Basics&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;CSS Fundamentals&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2023 My Blog. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="content-card highlight">
+                        <h3>💡 Benefits of Semantic HTML</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">👁️</span>
+                                <div>
+                                    <strong>Accessibility</strong>
+                                    <p>Screen readers understand the structure</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🔍</span>
+                                <div>
+                                    <strong>SEO</strong>
+                                    <p>Search engines better understand content</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">💻</span>
+                                <div>
+                                    <strong>Maintainability</strong>
+                                    <p>Easier to read and maintain code</p>
+                                </div>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🚀</span>
+                                <div>
+                                    <strong>Future-proof</strong>
+                                    <p>Works better with new technologies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="practice-exercise">
+                        <h3>🎯 Convert to Semantic HTML</h3>
+                        <p>Convert this non-semantic HTML to use semantic elements:</p>
+                        <div class="code-example">
+                            <pre><code>&lt;div id="header"&gt;
+    &lt;div class="title"&gt;My Website&lt;/div&gt;
+    &lt;div class="nav"&gt;
+        &lt;div&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="main-content"&gt;
+    &lt;div class="post"&gt;
+        &lt;div class="post-title"&gt;Blog Post&lt;/div&gt;
+        &lt;div class="post-content"&gt;Content here...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="footer"&gt;
+    &lt;div&gt;Copyright 2023&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                        <details>
+                            <summary>Show Solution</summary>
+                            <div class="code-example">
+                                <pre><code>&lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="#"&gt;Home&lt;/a&gt;
+        &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Blog Post&lt;/h2&gt;
+        &lt;p&gt;Content here...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Copyright 2023&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- Lesson Summary -->
+                <div class="lesson-summary">
+                    <h3>📚 HTML Mastery Complete!</h3>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="summary-icon">🌐</div>
+                            <h4>HTML Fundamentals</h4>
+                            <p>Structure, elements, and attributes</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon">📝</div>
+                            <h4>Content Organization</h4>
+                            <p>Headings, paragraphs, and text formatting</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon">🔗</div>
+                            <h4>Media & Navigation</h4>
+                            <p>Links, images, and lists</p>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-icon">📊</div>
+                            <h4>Data & Forms</h4>
+                            <p>Tables and user input forms</p>
+                        </div>
+                    </div>
+                    <div class="next-steps">
+                        <h4>🚀 Ready for the Next Step?</h4>
+                        <p>You've mastered HTML! Continue to CSS lessons to learn how to style your web pages beautifully.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-navigation">
+                    <a href="home.html" class="btn btn-secondary">← Back to Home</a>
+                    <a href="practice.html" class="btn btn-primary">Practice HTML →</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="main-footer">
+            <p>CodeScape Learning Platform &copy; 2023</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Dark mode functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+            const themeText = themeToggle.querySelector('.theme-text');
+            
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+            updateThemeButton(savedTheme);
+            
+            themeToggle.addEventListener('click', function() {
+                const isDark = document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateThemeButton(isDark ? 'dark' : 'light');
+            });
+            
+            function updateThemeButton(theme) {
+                if (theme === 'dark') {
+                    themeIcon.textContent = '☀️';
+                    themeText.textContent = 'Light Mode';
+                } else {
+                    themeIcon.textContent = '🌙';
+                    themeText.textContent = 'Dark Mode';
+                }
+            }
+
+            // Lesson navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.lesson-section');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

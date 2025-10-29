@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeScape Learning Platform | Booting...</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="boot-screen">
+    <div class="boot-container">
+        <div class="boot-header">
+            <div class="boot-logo">
+                <div class="logo-icon">💻</div>
+                <h1>CodeScape OS</h1>
+            </div>
+            <p class="boot-version">HTML/CSS Learning Platform v2.0</p>
+        </div>
+        
+        <div class="boot-content">
+            <div class="boot-line">Initializing learning environment...</div>
+            <div class="boot-line">Loading HTML curriculum modules...</div>
+            <div class="boot-line">Loading CSS styling framework...</div>
+            <div class="boot-line">Starting interactive practice environment...</div>
+            <div class="boot-line">System ready! Launching platform...</div>
+        </div>
+        
+        <div class="boot-progress">
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">Booting System...</div>
+        </div>
+        
+        <div class="boot-footer">
+            <p>Preparing your coding journey...</p>
+        </div>
+    </div>
+    
+    <script>
+        // Boot sequence
+        document.addEventListener('DOMContentLoaded', function() {
+            const bootLines = document.querySelectorAll('.boot-line');
+            const progressFill = document.querySelector('.progress-fill');
+            const progressText = document.querySelector('.progress-text');
+            
+            const progressStages = [
+                "Booting System...",
+                "Loading Modules...",
+                "Initializing Environment...", 
+                "Finalizing Setup...",
+                "Ready to Learn!"
+            ];
+            
+            // Show boot lines with delay
+            bootLines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.add('visible');
+                    // Update progress text
+                    if (index < progressStages.length - 1) {
+                        progressText.textContent = progressStages[index + 1];
+                    }
+                }, 1200 * (index + 1));
+            });
+            
+            // Animate progress bar
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                progress += 2;
+                progressFill.style.width = progress + '%';
+                
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                }
+            }, 70);
+            
+            // Redirect to home page after boot
+            setTimeout(() => {
+                localStorage.setItem('bootCompleted', 'true');
+                window.location.href = 'home.html';
+            }, 8000);
+        });
+    </script>
+</body>
+</html>

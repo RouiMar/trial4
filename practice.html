@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Area | CodeScape</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dark Mode Toggle -->
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Dark Mode</span>
+            </button>
+        </div>
+
+        <header class="practice-header">
+            <div class="header-main">
+                <h1>Practice Area</h1>
+                <nav class="breadcrumb">
+                    <a href="home.html">Home</a> > <span>Practice Area</span>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="practice-main">
+            <!-- Practice Controls -->
+            <div class="practice-controls">
+                <div class="control-group">
+                    <h3>🎯 Practice Mode</h3>
+                    <div class="mode-selector">
+                        <button class="mode-btn active" data-mode="html">HTML</button>
+                        <button class="mode-btn" data-mode="css">CSS</button>
+                        <button class="mode-btn" data-mode="both">HTML + CSS</button>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h3>📁 Practice Templates</h3>
+                    <select class="template-select" id="templateSelect">
+                        <option value="blank">Blank Template</option>
+                        <option value="html-basics">HTML Basics</option>
+                        <option value="css-basics">CSS Basics</option>
+                        <option value="layout">Layout Challenge</option>
+                        <option value="responsive">Responsive Design</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Editor Layout -->
+            <div class="editor-layout">
+                <!-- HTML Editor -->
+                <div class="editor-panel html-editor">
+                    <div class="editor-header">
+                        <h3>📝 HTML Editor</h3>
+                        <button class="run-btn" id="runHtml">
+                            <span class="run-icon">▶️</span>
+                            Run HTML
+                        </button>
+                    </div>
+                    <textarea class="code-editor" id="htmlCode" spellcheck="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Practice Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to my practice page.&lt;/p&gt;
+    &lt;button&gt;Click Me&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+                </div>
+
+                <!-- CSS Editor -->
+                <div class="editor-panel css-editor">
+                    <div class="editor-header">
+                        <h3>🎨 CSS Editor</h3>
+                        <button class="run-btn" id="runCss">
+                            <span class="run-icon">▶️</span>
+                            Run CSS
+                        </button>
+                    </div>
+                    <textarea class="code-editor" id="cssCode" spellcheck="false">body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+h1 {
+    color: #ffd700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}</textarea>
+                </div>
+
+                <!-- Preview Panel -->
+                <div class="preview-panel">
+                    <div class="preview-header">
+                        <h3>👁️ Live Preview</h3>
+                        <button class="refresh-btn" id="refreshPreview">
+                            <span class="refresh-icon">🔄</span>
+                            Refresh
+                        </button>
+                    </div>
+                    <div class="preview-container">
+                        <iframe id="previewFrame" class="preview-frame"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practice Tips -->
+            <div class="practice-tips">
+                <h3>💡 Practice Tips</h3>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <span class="tip-number">1</span>
+                        <p>Try modifying the code and see changes in real-time</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-number">2</span>
+                        <p>Experiment with different HTML tags and CSS properties</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-number">3</span>
+                        <p>Use templates to practice specific concepts</p>
+                    </div>
+                    <div class="tip-item">
+                        <span class="tip-number">4</span>
+                        <p>Don't be afraid to break things - that's how you learn!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="practice-navigation">
+                <a href="home.html" class="btn btn-secondary">← Back to Home</a>
+                <div class="nav-actions">
+                    <button class="btn btn-outline" id="resetEditors">Reset Editors</button>
+                    <button class="btn btn-primary" id="downloadCode">Download Code</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="main-footer">
+            <p>CodeScape Learning Platform &copy; 2023</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Practice area functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dark mode functionality
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+            const themeText = themeToggle.querySelector('.theme-text');
+            
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+            updateThemeButton(savedTheme);
+            
+            themeToggle.addEventListener('click', function() {
+                const isDark = document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateThemeButton(isDark ? 'dark' : 'light');
+            });
+            
+            function updateThemeButton(theme) {
+                if (theme === 'dark') {
+                    themeIcon.textContent = '☀️';
+                    themeText.textContent = 'Light Mode';
+                } else {
+                    themeIcon.textContent = '🌙';
+                    themeText.textContent = 'Dark Mode';
+                }
+            }
+
+            // Practice area code
+            const htmlCode = document.getElementById('htmlCode');
+            const cssCode = document.getElementById('cssCode');
+            const previewFrame = document.getElementById('previewFrame');
+            const runHtmlBtn = document.getElementById('runHtml');
+            const runCssBtn = document.getElementById('runCss');
+            const refreshBtn = document.getElementById('refreshPreview');
+            const modeButtons = document.querySelectorAll('.mode-btn');
+            const templateSelect = document.getElementById('templateSelect');
+            const resetBtn = document.getElementById('resetEditors');
+            const downloadBtn = document.getElementById('downloadCode');
+
+            // Update preview function
+            function updatePreview() {
+                const html = htmlCode.value;
+                const css = cssCode.value;
+                
+                const previewDoc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+                previewDoc.open();
+                previewDoc.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <style>${css}</style>
+                    </head>
+                    <body>
+                        ${html}
+                    </body>
+                    </html>
+                `);
+                previewDoc.close();
+            }
+
+            // Event listeners
+            runHtmlBtn.addEventListener('click', updatePreview);
+            runCssBtn.addEventListener('click', updatePreview);
+            refreshBtn.addEventListener('click', updatePreview);
+
+            // Mode buttons
+            modeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    modeButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const mode = this.dataset.mode;
+                    if (mode === 'html') {
+                        document.querySelector('.css-editor').style.display = 'none';
+                    } else {
+                        document.querySelector('.css-editor').style.display = 'block';
+                    }
+                });
+            });
+
+            // Template selection
+            templateSelect.addEventListener('change', function() {
+                const template = this.value;
+                // Template loading logic would go here
+                updatePreview();
+            });
+
+            // Reset editors
+            resetBtn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to reset all editors?')) {
+                    htmlCode.value = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Practice Page</title>
+</head>
+<body>
+    
+</body>
+</html>`;
+                    cssCode.value = `body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}`;
+                    updatePreview();
+                }
+            });
+
+            // Download code
+            downloadBtn.addEventListener('click', function() {
+                const htmlContent = htmlCode.value;
+                const cssContent = cssCode.value;
+                
+                const fullCode = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Code</title>
+    <style>${cssContent}</style>
+</head>
+<body>
+${htmlContent.replace(/^.*<body[^>]*>|<\/body>.*$/gms, '').trim()}
+</body>
+</html>`;
+
+                const blob = new Blob([fullCode], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'my-practice-code.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+
+            // Initialize preview
+            updatePreview();
+        });
+    </script>
+</body>
+</html>

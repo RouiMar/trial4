@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeScape Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dark Mode Toggle -->
+        <div class="theme-toggle">
+            <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+                <span class="theme-text">Dark Mode</span>
+            </button>
+        </div>
+
+        <header class="main-header">
+            <div class="header-content">
+                <h1>CodeScape Learning Platform</h1>
+                <p class="tagline">Master HTML & CSS with interactive lessons and practice</p>
+            </div>
+        </header>
+        
+        <main class="home-main">
+            <section class="welcome-section">
+                <div class="welcome-content">
+                    <h2>Welcome to Your Learning Journey</h2>
+                    <p class="welcome-text">Choose a learning path to get started:</p>
+                </div>
+            </section>
+            
+            <div class="learning-options">
+                <div class="option-card html-card">
+                    <div class="card-icon">📄</div>
+                    <h3>HTML Lessons</h3>
+                    <p>Learn the building blocks of web pages with detailed HTML tutorials</p>
+                    <a href="html-lessons.html" class="btn btn-primary">Start Learning</a>
+                </div>
+                
+                <div class="option-card css-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>CSS Lessons</h3>
+                    <p>Master styling and layout with comprehensive CSS tutorials</p>
+                    <a href="css-lessons.html" class="btn btn-primary">Start Learning</a>
+                </div>
+                
+                <div class="option-card practice-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Practice Area</h3>
+                    <p>Test your skills with our interactive coding playground</p>
+                    <a href="practice.html" class="btn btn-primary">Start Practicing</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="main-footer">
+            <p>CodeScape Learning Platform &copy; 2023</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Dark mode functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+            const themeText = themeToggle.querySelector('.theme-text');
+            
+            // Check for saved theme or prefer-color-scheme
+            const savedTheme = localStorage.getItem('theme') || 
+                              (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            
+            // Apply the saved theme
+            document.body.classList.toggle('dark-mode', savedTheme === 'dark');
+            updateThemeButton(savedTheme);
+            
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', function() {
+                const isDark = document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateThemeButton(isDark ? 'dark' : 'light');
+            });
+            
+            function updateThemeButton(theme) {
+                if (theme === 'dark') {
+                    themeIcon.textContent = '☀️';
+                    themeText.textContent = 'Light Mode';
+                } else {
+                    themeIcon.textContent = '🌙';
+                    themeText.textContent = 'Dark Mode';
+                }
+            }
+            
+            // Check if boot sequence has been completed
+            if (!localStorage.getItem('bootCompleted')) {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>
